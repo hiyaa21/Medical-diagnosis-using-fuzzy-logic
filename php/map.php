@@ -1,6 +1,6 @@
 <?php
 	
-	$con=mysqli_connect("localhost","root","","diseasedb") or die("couldn't to the  server");
+	$con=mysqli_connect("localhost","root","","medical") or die("couldn't to the  server");
 	$disease = $_POST['disease'];
 	$type = json_decode($_POST['type']);
 

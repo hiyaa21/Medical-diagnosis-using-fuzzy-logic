@@ -1,15 +1,14 @@
 <?php
+require "dp.php";
 
-  require "dp.php";
+$str = '';
 
+$q = "SELECT sname, fuzzy_set FROM symptom";
+$res = mysqli_query($con, $q);
 
-  $str = '';
-  $q1 = "Select Description from symptom";
-  $res = mysqli_query($con,$q1);
+while($row = mysqli_fetch_assoc($res)) {
+    $str .= $row['sname'] . ',' . $row['fuzzy_set'] . '|';
+}
 
-  while($row = $res->fetch_array())
-  {
-      $str = $str.$row['Description'].'|';
-  }
-
-  echo $str;
+echo $str;
+?>

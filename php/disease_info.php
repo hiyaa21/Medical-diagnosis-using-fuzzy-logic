@@ -1,6 +1,6 @@
 <?php
 
-    $con=mysqli_connect("localhost","root","","diseasedb") or die("couldn't to the  server");
+    $con=mysqli_connect("localhost","root","","medical") or die("couldn't to the  server");
     $disease = $_POST['disease'];
     $q1 = "select did from disease where dname ='".$disease."'";
     $res = mysqli_query($con,$q1);
